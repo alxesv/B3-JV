@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float m_MoveSpeed;
 
+    [SerializeField]
+    private GameObject[] itemToDisappear;
+
     private float _movement;
     private GameManager _gameManager;
 
@@ -30,7 +33,13 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) )
+        {
+            foreach (GameObject item in itemToDisappear)
+            {
+                GameObject.Destroy(item);
+            }
+        }
         _movement = Input.GetAxis("Horizontal");
     }
 
