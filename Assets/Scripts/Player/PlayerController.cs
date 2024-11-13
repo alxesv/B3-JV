@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     public Sprite One_HP;
     public Sprite Dead;
     public Sprite End;
-
+    public bool _isJetpackEquipped = false;
+    public GameObject Jetpack;
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -67,7 +68,25 @@ public class PlayerController : MonoBehaviour
 
     public void Stop()
     {
+        Jetpack.SetActive(false);
         _rigBod.velocity = new Vector2(0, _rigBod.velocity.y);
+        _rigBod.gravityScale = 0;
+        _rigBod.velocity = Vector3.zero;
+        _rigBod.freezeRotation = true;
         enabled = false;
+    }
+
+    public void GetJetpack()
+    {
+        _isJetpackEquipped = true;
+        Jetpack.SetActive(true);
+        StartCoroutine(JetpackTimer());
+    }
+
+    public IEnumerator JetpackTimer()
+    {
+        yield return new WaitForSeconds(5);
+        _isJetpackEquipped = false;
+        Jetpack.SetActive(false);
     }
 }
