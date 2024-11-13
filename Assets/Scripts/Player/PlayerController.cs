@@ -33,9 +33,8 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) )
         {
-            // GameObject.Destroy(itemToDisappear);
             foreach (GameObject item in itemToDisappear)
             {
                 GameObject.Destroy(item);
