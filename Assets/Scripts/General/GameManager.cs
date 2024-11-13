@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
         m_WinUI.SetActive(true);
         m_WinUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
+        m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.End;
         m_Player.Stop();
         m_Player._rigBod.gravityScale = 0;
         m_Player._rigBod.velocity = Vector3.zero;
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
 
         m_GameOverUI.SetActive(true);
         m_GameOverUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
+        m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.Dead;
         m_Player.Stop();
         m_Player._rigBod.gravityScale = 0;
         m_Player._rigBod.velocity = Vector3.zero;
