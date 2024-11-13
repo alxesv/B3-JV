@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
         _rigBod.gravityScale = 0;
         _rigBod.velocity = Vector3.zero;
         _rigBod.freezeRotation = true;
+        removeAllItems();
         enabled = false;
     }
 
@@ -91,6 +92,9 @@ public class PlayerController : MonoBehaviour
         // remove all items
         _isJetpackEquipped = false;
         Jetpack.SetActive(false);
+
+        _isParachuteEquipped = false;
+        Parachute.SetActive(false);
     }
 
     public void GetJetpack()
