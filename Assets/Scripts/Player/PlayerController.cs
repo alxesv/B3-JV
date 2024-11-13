@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
     private float _movement;
     private GameManager _gameManager;
 
+    public Sprite Three_HP;
+    public Sprite Two_HP;
+    public Sprite One_HP;
+    public Sprite Dead;
+    public Sprite End;
+
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -47,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         
         _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+        _rigBod.AddTorque(-_movement * 0.6f);
 
         if (_movement > 0)
         {
