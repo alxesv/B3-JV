@@ -76,6 +76,12 @@ public class PlayerController : MonoBehaviour
         enabled = false;
     }
 
+    public void removeAllItems(){
+        // remove all items
+        _isJetpackEquipped = false;
+        Jetpack.SetActive(false);
+    }
+
     public void GetJetpack()
     {
         _isJetpackEquipped = true;
