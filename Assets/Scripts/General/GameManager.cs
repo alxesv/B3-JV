@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private PlayerController m_Player;
 
     public bool _isOver = false;
+    public static int score = 0;
 
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        score = 0;
     }
 
 }
