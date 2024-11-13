@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public bool _isOver = false;
     public static int score = 0;
+    public bool isCountOn = false;
 
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
@@ -23,7 +24,8 @@ public class GameManager : MonoBehaviour
     {
         if (_isOver)
             return;
-
+            
+        isCountOn = false;
         _isOver = true;
 
         m_WinUI.SetActive(true);
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
         if (_isOver)
             return;
 
+        isCountOn = false;
         _isOver = true;
 
         m_GameOverUI.SetActive(true);

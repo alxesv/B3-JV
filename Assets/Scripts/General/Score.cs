@@ -8,7 +8,6 @@ public class Score : MonoBehaviour
     public GameManager gameManager;
     public TextMeshProUGUI _text; 
     public float currentTime;
-    public bool scoreCountOn = false;
 
     void Awake()
     {
@@ -18,21 +17,20 @@ public class Score : MonoBehaviour
     void Start()
     {
         currentTime = 0f;
-        scoreCountOn = true;
     }
 
     void Update()
     {
-        if(!scoreCountOn || gameManager._isOver) {
+        if(!gameManager.isCountOn) { 
             return;
-        }
+        } 
+        else {
         currentTime += 1 * Time.deltaTime;
-        if (currentTime >= 1)
-        {
+        if (currentTime >= 1) {
             GameManager.score += 1;
             currentTime = 0;
         }
         _text.text = "Score: " + GameManager.score;
-
+        }
     }
 }

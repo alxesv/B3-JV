@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) )
         {
+            if(_gameManager.isCountOn == false){
+                _gameManager.isCountOn = true;
+            }
             foreach (GameObject item in itemToDisappear)
             {
                 GameObject.Destroy(item);
