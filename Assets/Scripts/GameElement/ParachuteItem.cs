@@ -8,7 +8,9 @@ public class ParachuteItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerController>().GetParachute();
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            player.removeAllItems();
+            player.GetParachute();
             Destroy(gameObject);
         }
     }
