@@ -27,10 +27,16 @@ public class PlayerController : MonoBehaviour
     public Sprite End;
     public bool _isJetpackEquipped = false;
     public GameObject Jetpack;
+    public GameObject Parachute;
+
+    public bool _isParachuteEquipped = false;
+
+    public float linearDrag;
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
         _rigBod = GetComponent<Rigidbody2D>();
+        linearDrag = _rigBod.drag;
     }
 
     // Update is called once per frame
@@ -52,7 +58,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        if(_isParachuteEquipped){
+            _rigBod.drag = 3;
+        }else{
+            _rigBod.drag = linearDrag;
+        }
+
         _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
         _rigBod.AddTorque(-_movement * 0.6f);
 
@@ -94,5 +105,19 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(5);
         _isJetpackEquipped = false;
         Jetpack.SetActive(false);
+    }
+
+    public void GetParachute()
+    {
+        _isParachuteEquipped = true;
+        Parachute.SetActive(true);
+        StartCoroutine(ParachuteTimer());
+    }
+
+    public IEnumerator ParachuteTimer()
+    {
+        yield return new WaitForSeconds(5);
+        _isParachuteEquipped = false;
+        Parachute.SetActive(false);
     }
 }
