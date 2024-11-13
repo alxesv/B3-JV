@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public bool _isParachuteEquipped = false;
 
-    public float linearDrag;
+    private float linearDrag;
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if(_isParachuteEquipped){
-            _rigBod.drag = 3;
+            _rigBod.drag = 3.5f;
         }else{
             _rigBod.drag = linearDrag;
         }
