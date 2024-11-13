@@ -26,7 +26,11 @@ public class GameManager : MonoBehaviour
         _isOver = true;
 
         m_WinUI.SetActive(true);
+        m_WinUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
         m_Player.Stop();
+        m_Player._rigBod.gravityScale = 0;
+        m_Player._rigBod.velocity = Vector3.zero;
+        m_Player._rigBod.freezeRotation = true;
     }
 
     public void GameOver()
@@ -37,7 +41,11 @@ public class GameManager : MonoBehaviour
         _isOver = true;
 
         m_GameOverUI.SetActive(true);
+        m_GameOverUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
         m_Player.Stop();
+        m_Player._rigBod.gravityScale = 0;
+        m_Player._rigBod.velocity = Vector3.zero;
+        m_Player._rigBod.freezeRotation = true;
     }
 
     public void Replay()
@@ -45,8 +53,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
 }
