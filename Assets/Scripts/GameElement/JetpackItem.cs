@@ -8,7 +8,9 @@ public class JetpackItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            FindObjectOfType<PlayerController>().GetJetpack();
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            player.removeAllItems();
+            player.GetJetpack();
             Destroy(gameObject);
         }
     }
