@@ -11,14 +11,15 @@ public class JetpackController : MonoBehaviour
 
     public Sprite JetpackOn;
     public Sprite JetpackOff;
+    public AudioSource jetpackSound;
 
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
+        IsJetpackActive = false;
     }
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,10 +29,12 @@ public class JetpackController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 IsJetpackActive = true;
+                jetpackSound.Play();
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 IsJetpackActive = false;
+                jetpackSound.Stop();
             }
         }else{
             IsJetpackActive = false;
