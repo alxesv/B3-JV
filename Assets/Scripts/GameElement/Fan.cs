@@ -7,6 +7,7 @@ public class FanController : MonoBehaviour
     public float fanForce = 50f;
     private PlayerController m_Player;
     private bool isPlayerInFanZone = false;
+    public AudioSource fanAudioSource;
 
     public enum FanDirection
     {
@@ -43,6 +44,7 @@ public class FanController : MonoBehaviour
     {
         if (isPlayerInFanZone && m_Player != null)
         {
+            fanAudioSource.Play();
             switch (fanDirection)
             {
                 case FanDirection.Up:
@@ -59,5 +61,6 @@ public class FanController : MonoBehaviour
                     break;
             }
         }
+        // fanAudioSource.Stop();
     }
 }
