@@ -8,7 +8,7 @@ public class SaltItem : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.score += 5;
+            GameManager.score += 50;
             Destroy(gameObject);
         }
     }
