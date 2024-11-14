@@ -15,6 +15,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private PlayerController m_Player;
 
+    public AudioSource audioSource;
+
+
 
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
@@ -22,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
     void Start() {
         _playerHealth = 3;
         _maxHealth = 3;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public IEnumerator invulnFrame(){
@@ -36,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         if(_isImmune){
             return;
         }
+        audioSource.Play();
 
         _playerHealth -= damage;
 
@@ -47,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
             m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.One_HP;
         }
 
-        if (_playerHealth == 0){
+        if (_playerHealth < 1){
             FindObjectOfType<GameManager>().GameOver();
         }else{
             StartCoroutine(invulnFrame());
