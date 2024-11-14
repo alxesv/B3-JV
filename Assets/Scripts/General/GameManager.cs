@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public static int score = 0;
     public bool isCountOn = false;
 
+    public AudioSource winGameAudioSource;
+
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
     }
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
             
         isCountOn = false;
         _isOver = true;
+
+        winGameAudioSource.Play();
 
         m_WinUI.SetActive(true);
         m_WinUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
