@@ -71,7 +71,10 @@ public class PlayerController : MonoBehaviour
             _rigBod.drag = linearDrag;
         }
 
-        _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+        if (Mathf.Abs(_movement) > 0.01f)
+        {
+            _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+        }
         _rigBod.AddTorque(-_movement * 0.6f);
 
         if (_movement > 0)

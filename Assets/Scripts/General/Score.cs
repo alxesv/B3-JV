@@ -26,7 +26,7 @@ public class Score : MonoBehaviour
         } 
         else {
         currentTime += 1 * Time.deltaTime;
-        if (currentTime >= 1) {
+        if (currentTime >= 0.1) {
             GameManager.score += 1;
             currentTime = 0;
         }
