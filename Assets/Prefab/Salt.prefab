@@ -227,6 +227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saltAudioSource: {fileID: 4533244922639726767}
+  saltPoint: 50
+  text: {fileID: 0}
+  hideTextDelay: 0.5
 --- !u!60 &6205441650122714581
 PolygonCollider2D:
   m_ObjectHideFlags: 0
