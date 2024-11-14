@@ -36,6 +36,10 @@ public class Score : MonoBehaviour
                 bonusText.text = "+ " + SaltItem.saltPoint;
                 StartCoroutine(HideBonusTextAfterDelay());
             }
+            if (GoldenSaltItem.isBonusGoldenSalt) {
+                bonusText.text = "+ " + GoldenSaltItem.goldenSaltPoint;
+                StartCoroutine(HideBonusTextAfterDelay());
+            }
         }
     }
 
