@@ -15,7 +15,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private PlayerController m_Player;
 
-    public AudioSource audioSource;
+    public AudioSource damageAudioSource;
+    public AudioSource repairAudioSource;
 
 
 
@@ -25,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
     void Start() {
         _playerHealth = 3;
         _maxHealth = 3;
-        audioSource = GetComponent<AudioSource>();
     }
 
     public IEnumerator invulnFrame(){
@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         if(_isImmune){
             return;
         }
-        audioSource.Play();
+        damageAudioSource.Play();
 
         _playerHealth -= damage;
 
@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
     public void GainHealth(int healing){
         if(_playerHealth < _maxHealth){
             _playerHealth += healing;
-
+            repairAudioSource.Play();
             if(_playerHealth == 2){
                 m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.Two_HP;
             }
