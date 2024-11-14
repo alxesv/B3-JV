@@ -62,5 +62,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         score = 0;
     }
+    public void toMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
+        score = 0;
+    }
 
 }
