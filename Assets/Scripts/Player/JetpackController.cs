@@ -33,6 +33,8 @@ public class JetpackController : MonoBehaviour
             {
                 IsJetpackActive = false;
             }
+        }else{
+            IsJetpackActive = false;
         }
         
     }
