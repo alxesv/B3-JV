@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public AudioSource winGameAudioSource;
 
+    public AudioSource music;
+    public bool isMusicOn = false;
+
     void Awake(){
         m_Player = FindObjectOfType<PlayerController>();
     }
@@ -31,9 +34,10 @@ public class GameManager : MonoBehaviour
         _isOver = true;
 
         winGameAudioSource.Play();
-
+        isMusicOn = false;
+        music.Stop();
         m_WinUI.SetActive(true);
-        m_WinUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
+        m_WinUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_WinUI.transform.position.z);
         m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.End;
         m_Player.Stop();
     }
@@ -45,7 +49,8 @@ public class GameManager : MonoBehaviour
 
         isCountOn = false;
         _isOver = true;
-
+        isMusicOn = false;
+        music.Stop();
         m_GameOverUI.SetActive(true);
         m_GameOverUI.transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, m_GameOverUI.transform.position.z);
         m_Player.GetComponent<SpriteRenderer>().sprite = m_Player.Dead;

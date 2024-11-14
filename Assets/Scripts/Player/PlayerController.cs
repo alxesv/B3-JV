@@ -51,6 +51,10 @@ public class PlayerController : MonoBehaviour
             if(_gameManager.isCountOn == false){
                 _gameManager.isCountOn = true;
             }
+            if(_gameManager.isMusicOn == false){
+                _gameManager.music.Play();
+                _gameManager.isMusicOn = true;
+            }
             foreach (GameObject item in itemToDisappear)
             {
                 GameObject.Destroy(item);
