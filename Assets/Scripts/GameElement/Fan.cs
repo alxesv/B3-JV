@@ -44,6 +44,7 @@ public class FanController : MonoBehaviour
     {
         if (isPlayerInFanZone && m_Player != null)
         {
+            m_Player._canMove = false;
             fanAudioSource.Play();
             switch (fanDirection)
             {
@@ -60,6 +61,8 @@ public class FanController : MonoBehaviour
                     m_Player._rigBod.AddForce(Vector2.right * fanForce);
                     break;
             }
+        }else{
+            m_Player._canMove = true;
         }
         // fanAudioSource.Stop();
     }

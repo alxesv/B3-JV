@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private float _movement;
     private GameManager _gameManager;
-
+    public bool _canMove = true;
     public Sprite Three_HP;
     public Sprite Two_HP;
     public Sprite One_HP;
@@ -71,19 +71,23 @@ public class PlayerController : MonoBehaviour
             _rigBod.drag = linearDrag;
         }
 
-        if (Mathf.Abs(_movement) > 0.01f)
-        {
-            _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
-        }
-        _rigBod.AddTorque(-_movement * 0.6f);
+        if(_canMove){
 
-        if (_movement > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (_movement < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
+            if (Mathf.Abs(_movement) > 0.01f)
+            {
+                _rigBod.velocity = new Vector2(m_MoveSpeed * _movement, _rigBod.velocity.y);
+            }
+            _rigBod.AddTorque(-_movement * 0.6f);
+
+            if (_movement > 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (_movement < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+
         }
     }
 
