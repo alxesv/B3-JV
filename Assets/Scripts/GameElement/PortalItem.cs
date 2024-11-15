@@ -21,7 +21,7 @@ public class PortalItem : MonoBehaviour
         {
             other.transform.position = targetLocation.position;
             portalAudioSource.Play();
-            Destroy(gameObject);
+            Destroy(gameObject, portalAudioSource.clip.length);
         }
     }
 }
