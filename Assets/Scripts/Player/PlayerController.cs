@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Sprite One_HP;
     public Sprite Dead;
     public Sprite End;
-    public bool _isJetpackEquipped = false;
+    public bool _isJetpackActive = false;
     public GameObject Jetpack;
     public GameObject Parachute;
 
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
     public void removeAllItems(){
         // remove all items
-        _isJetpackEquipped = false;
+        _isJetpackActive = false;
         Jetpack.SetActive(false);
 
         _isParachuteEquipped = false;
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void GetJetpack()
     {
-        _isJetpackEquipped = true;
+        _isJetpackActive = false;
         Jetpack.SetActive(true);
         StartCoroutine(JetpackTimer());
     }
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator JetpackTimer()
     {
         yield return new WaitForSeconds(5);
-        _isJetpackEquipped = false;
+        _isJetpackActive = false;
         Jetpack.SetActive(false);
     }
 
