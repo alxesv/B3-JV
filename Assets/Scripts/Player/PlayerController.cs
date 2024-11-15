@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private float linearDrag;
 
     private Coroutine JetPackCoroutine;
+    private Coroutine ParachuteCoroutine;
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
@@ -134,7 +135,10 @@ public class PlayerController : MonoBehaviour
     {
         _isParachuteEquipped = true;
         Parachute.SetActive(true);
-        StartCoroutine(ParachuteTimer());
+        if(ParachuteCoroutine != null){
+            StopCoroutine(ParachuteCoroutine);
+        }
+        ParachuteCoroutine = StartCoroutine(ParachuteTimer());
     }
 
     public IEnumerator ParachuteTimer()
