@@ -35,10 +35,12 @@ public class Score : MonoBehaviour
             if (SaltItem.isBonusSalt) {
                 bonusText.text = "+ " + SaltItem.saltPoint;
                 StartCoroutine(HideBonusTextAfterDelay());
+                SaltItem.isBonusSalt = false;
             }
             if (GoldenSaltItem.isBonusGoldenSalt) {
                 bonusText.text = "+ " + GoldenSaltItem.goldenSaltPoint;
                 StartCoroutine(HideBonusTextAfterDelay());
+                GoldenSaltItem.isBonusGoldenSalt = false;
             }
         }
     }
@@ -47,6 +49,5 @@ public class Score : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         bonusText.text = "";
-        SaltItem.isBonusSalt = false;
     }
 }
