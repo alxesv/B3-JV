@@ -28,6 +28,7 @@ public class FanController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            fanAudioSource.Play();
             isPlayerInFanZone = true;
         }
     }
@@ -45,7 +46,6 @@ public class FanController : MonoBehaviour
         if (isPlayerInFanZone && m_Player != null)
         {
             m_Player._canMove = false;
-            fanAudioSource.Play();
             switch (fanDirection)
             {
                 case FanDirection.Up:

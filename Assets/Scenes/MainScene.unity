@@ -8733,7 +8733,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1399896642}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10721,7 +10721,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1335118319}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11996,7 +11996,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1866574724}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12124,7 +12124,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 750763069}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12567,6 +12567,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &750763069 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 721528953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &754395461
 GameObject:
   m_ObjectHideFlags: 0
@@ -12995,6 +13000,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7213864953438941467, guid: 315443cbd61684fc7a9c02d417377f97, type: 3}
   m_PrefabInstance: {fileID: 766027336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &770438696 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 962016640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &771082194
 PrefabInstance:
@@ -14531,6 +14541,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1311303315}
     m_Modifications:
+    - target: {fileID: 6104067526079147730, guid: 6f56520832740459e9636918e14758d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7098188204006012941, guid: 6f56520832740459e9636918e14758d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.2
@@ -14916,6 +14930,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &866244515 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 1209072900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &868062239
 GameObject:
   m_ObjectHideFlags: 0
@@ -16210,7 +16229,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 770438696}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18080,6 +18099,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8399215296728000194, guid: 3693fb93272874a708f19c739acc6acd, type: 3}
   m_PrefabInstance: {fileID: 1087120208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1091130210 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 1618516043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1091832833
 PrefabInstance:
@@ -20289,7 +20313,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 866244515}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20580,7 +20604,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1254524009}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21188,6 +21212,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8399215296728000194, guid: 3693fb93272874a708f19c739acc6acd, type: 3}
   m_PrefabInstance: {fileID: 1950046936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1254524009 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 1217058539}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1256198624
 PrefabInstance:
@@ -22661,6 +22690,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1335118319 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 663639520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1335362000
 GameObject:
   m_ObjectHideFlags: 0
@@ -23798,6 +23832,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &1399896642 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 546407855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1405855368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7976248529198321132, guid: 1a912f528f295463daaaa8024b2c9348, type: 3}
@@ -24136,6 +24175,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7213864953438941467, guid: 315443cbd61684fc7a9c02d417377f97, type: 3}
   m_PrefabInstance: {fileID: 1416968812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1419076795 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 1892386117}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1420082341
 PrefabInstance:
@@ -28188,7 +28232,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1091130210}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31892,6 +31936,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7462883817993715698, guid: f6a8f3715e2eb4f66b52ec937ca40541, type: 3}
   m_PrefabInstance: {fileID: 1864668020}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1866574724 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4237090893031197955, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
+  m_PrefabInstance: {fileID: 718912467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1869624260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32580,7 +32629,7 @@ PrefabInstance:
     - target: {fileID: 9104641855851471471, guid: bb56cbc1aa67bd34db28c88c559265d6, type: 3}
       propertyPath: portalAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419076795}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36844,6 +36893,7 @@ MonoBehaviour:
   itemToDisappear:
   - {fileID: 1394604672}
   - {fileID: 764769945}
+  _canMove: 1
   Three_HP: {fileID: 21300000, guid: b6f4dcd6cc4184cc09ab360402f28bb9, type: 3}
   Two_HP: {fileID: 21300000, guid: 8f24e5dc3811d41fda49a934baa5583b, type: 3}
   One_HP: {fileID: 21300000, guid: 426bd628e4cd84f249d958dcd170a436, type: 3}
