@@ -15,6 +15,7 @@ public class GoldenSaltItem : MonoBehaviour
             saltAudioSource.Play();
             isBonusGoldenSalt = true;
             GameManager.score += goldenSaltPoint;
+            Destroy(this.GetComponent<SpriteRenderer>());
             Destroy(gameObject, saltAudioSource.clip.length);
         }
     }

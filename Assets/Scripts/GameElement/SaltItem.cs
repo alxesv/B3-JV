@@ -15,6 +15,7 @@ public class SaltItem : MonoBehaviour
             saltAudioSource.Play();
             isBonusSalt = true;
             GameManager.score += saltPoint;
+            Destroy(this.GetComponent<SpriteRenderer>());
             Destroy(gameObject, saltAudioSource.clip.length);
         }
     }
