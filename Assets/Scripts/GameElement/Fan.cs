@@ -30,6 +30,7 @@ public class FanController : MonoBehaviour
         {
             fanAudioSource.Play();
             isPlayerInFanZone = true;
+            m_Player._canMove = false;
         }
     }
 
@@ -38,6 +39,7 @@ public class FanController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInFanZone = false;
+            m_Player._canMove = true;
         }
     }
 
@@ -45,7 +47,6 @@ public class FanController : MonoBehaviour
     {
         if (isPlayerInFanZone && m_Player != null)
         {
-            m_Player._canMove = false;
             switch (fanDirection)
             {
                 case FanDirection.Up:
@@ -61,9 +62,6 @@ public class FanController : MonoBehaviour
                     m_Player._rigBod.AddForce(Vector2.right * fanForce);
                     break;
             }
-        }else{
-            m_Player._canMove = true;
         }
-        // fanAudioSource.Stop();
     }
 }
