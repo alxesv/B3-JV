@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void macheteLevel(){
+        SceneManager.LoadScene("MacheteLevel");
+    }
+
     public void Quit()
     {
         Application.Quit();
